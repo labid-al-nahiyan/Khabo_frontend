@@ -8,6 +8,7 @@ import {
 
 
 import Home from './Component/Home/Home.jsx';
+import SearchByIngredient from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -16,8 +17,16 @@ const router = createBrowserRouter([
     element: <Home/>,
     children:[
       {
-        path : "/home",
-        element : <Home></Home>
+        path : "/search/byIngredients",
+        element : <SearchByIngredient/>
+      },
+      {
+        path : "/search/byDescription",
+        element : <SearchByIngredient/>
+      },
+      {
+        path : "/create",
+        element : <SearchByIngredient/>
       },
     ],
   },
