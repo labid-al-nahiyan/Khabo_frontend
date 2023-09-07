@@ -1,0 +1,26 @@
+/* Footer.css */
+.footer {
+    border: 1px solid green;
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:#6cf;
+  }
+  
+  .footer_container {
+    margin: 0 auto;
+    text-align: center;
+
+    
+  }
+  
+  /* You can add more styles as needed */
+  
