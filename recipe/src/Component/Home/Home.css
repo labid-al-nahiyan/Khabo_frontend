@@ -4,3 +4,10 @@
     min-height: 100vh; /* Make the wrapper at least the height of the viewport */
 
 }
+#root {
+    /* max-width: 1280px;  */
+    width: 100%;
+    margin: 0 ;
+    text-align: center;
+}
+  
