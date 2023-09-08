@@ -1,0 +1,9 @@
+.recipes-container
+{
+  padding: 20px;
+}
+.recipe_cartContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}

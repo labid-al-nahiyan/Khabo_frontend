@@ -7,14 +7,14 @@ import {
 } from "react-router-dom";
 
 
-import Home from './Component/Home/Home.jsx';
 import SearchByIngredient from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import './index.css'
+import App from './App.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <App/>,
     children:[
       {
         path : "/search/byIngredients",

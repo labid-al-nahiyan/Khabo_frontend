@@ -1,0 +1,59 @@
+.single_recipeCart
+{
+    display: grid;
+    grid-template-rows: 46% auto;
+    border-radius: 10px;
+    height: 500px;
+    margin: 10px;
+}
+.single_recipeCart_img
+{
+    border: 0;
+    overflow: hidden;
+}
+.single_recipeCart_img img {
+    width: 100%; /* Make the image 100% width of the container */
+    height: auto; /* Auto-adjust the height to maintain the aspect ratio */
+}
+.single_recipeCart_description
+{
+    text-align: start;
+    padding: 20px;
+    background-color: #9FDBF8;
+    font-size: large;
+}
+
+@keyframes underline {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+.cart_readMore
+{
+    position: relative;
+    color: #2976c3;
+    cursor: pointer;
+}
+
+.cart_readMore::before {
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 2px; 
+    background-color: #0b59a7; 
+    bottom: 0;
+    left: 0; 
+    transition: width 0.3s;
+}
+.cart_readMore:hover::before {
+    width: 100%;  
+    animation: underline 0.3s ease-in-out; 
+}
+.cart_readMore:hover{
+    color:#0b59a7;
+    font-size: 19px;
+}
+  
