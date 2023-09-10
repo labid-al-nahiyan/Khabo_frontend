@@ -1,16 +1,16 @@
 /* Navbar.css */
 .navbar {
-    background-color: #ffffff;
+    background-color: red;
     color: #000000;
+    padding: 0;
 }
   
 .navbar_container
 {
-    display: grid;
-    grid-template-columns: 30% 70%;
+    display: flex;
+    justify-content: space-between;
     background-color: #ffe161;
-    height: 80px;
-
+    width: 100%;
 }
 .logo-container
 {

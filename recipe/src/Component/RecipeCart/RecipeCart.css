@@ -5,6 +5,7 @@
     border-radius: 10px;
     height: 500px;
     margin: 10px;
+    min-width: 300px;
 }
 .single_recipeCart_img
 {
@@ -12,8 +13,8 @@
     overflow: hidden;
 }
 .single_recipeCart_img img {
-    height: 100%; /* Make the image 100% width of the container */
-    width: 100%; /* Auto-adjust the height to maintain the aspect ratio */
+    height: 100%; 
+    width: 100%; 
 }
 .single_recipeCart_description
 {
