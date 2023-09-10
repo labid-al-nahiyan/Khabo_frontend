@@ -2,8 +2,9 @@ import { useState } from 'react';
 import {CancelPresentationSharp} from '@mui/icons-material';
 import AddSharpIcon from '@mui/icons-material/AddSharp';
 import './SelectIngredients.css'
+import { checkPropTypes } from 'prop-types';
 
-const SelectIngredients = () => {
+const SelectIngredients = ({setIngredients}) => {
     const ingredients = ['Egg', 'Rice', 'Beef', 'Chicken', 'Fish']
 
     const [inputCount, setInputCount] = useState(0) // Initial input field count
@@ -48,6 +49,7 @@ const SelectIngredients = () => {
     }
     const handleSubmit = ()=>{
         console.log(inputValues)
+        setIngredients(inputValues)
     }
 
     return (
@@ -93,5 +95,8 @@ const SelectIngredients = () => {
       </div>
     );
 };
+SelectIngredients.propTypes = {
+    setIngredients: checkPropTypes.function
+}
 
 export default SelectIngredients;

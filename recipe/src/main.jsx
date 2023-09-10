@@ -10,12 +10,17 @@ import {
 import SearchByIngredient from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import './index.css'
 import App from './App.jsx';
+import { Home } from '@mui/icons-material';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     children:[
+      {
+        path : "/",
+        element : <Home/>
+      },
       {
         path : "/search/byIngredients",
         element : <SearchByIngredient/>

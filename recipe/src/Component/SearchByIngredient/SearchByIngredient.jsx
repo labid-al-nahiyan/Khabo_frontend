@@ -2,9 +2,36 @@ import './SearchByIngredient.css'
 
 import SelectIngredients from '../SelectIngredients/SelectIngredients';
 import ShowRecipe from '../ShowRecipe/ShowRecipe';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 function SearchByIngredient() {
     
+  const [ingredients, setIngredients] = useState(["Egg","Beef"]);
+  const [recipes, setRecipe] = useState([]);
+
+
+  useEffect(
+    function onChange() {
+       console.log("parent")
+       const dataToSend = ["turmeric","Salt"];
+       axios.post("https://khabo.pythonanywhere.com/recipes/search_by_ingredients/",
+       {
+        ingredients:dataToSend
+       })
+        .then((response) => {
+          console.log(response.data);
+          setRecipe(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+       
+    },
+    [ingredients]
+  )
+
 
   return (
     <div>
@@ -18,10 +45,10 @@ function SearchByIngredient() {
             <h1 style={{margin:0}}>Ingredients:</h1>
           </div>
           
-          <SelectIngredients></SelectIngredients>
+          <SelectIngredients setIngredients={setIngredients}></SelectIngredients>
         </div>
       </div>
-      <ShowRecipe></ShowRecipe>
+      <ShowRecipe recipes={recipes}></ShowRecipe>
     </div>
     
   );

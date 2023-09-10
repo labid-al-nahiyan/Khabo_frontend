@@ -12,8 +12,8 @@
     overflow: hidden;
 }
 .single_recipeCart_img img {
-    width: 100%; /* Make the image 100% width of the container */
-    height: auto; /* Auto-adjust the height to maintain the aspect ratio */
+    height: 100%; /* Make the image 100% width of the container */
+    width: 100%; /* Auto-adjust the height to maintain the aspect ratio */
 }
 .single_recipeCart_description
 {
