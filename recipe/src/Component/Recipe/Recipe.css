@@ -29,7 +29,7 @@
        margin-top: 20px;
     }
   }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 2000px) {
     .recipe
     {
         display: flex;
@@ -37,7 +37,8 @@
     .recipe-image
     {
         width: 50%;
-        padding: 20px;
+        padding: 50px;
+        margin-left: 40px;
     }
     .recipe-image img
     {
@@ -47,16 +48,30 @@
     .recipe-details
     {
         width: 50%;
-        padding: 20px;
+        padding: 50px;
+        margin-right: 50px;
     }
     .recipe-header
     {
         display: flex;
         justify-content: space-between;
     }
+    .recipe-extra-info
+    {
+        display: flex;
+        justify-content: space-between;
+    }
     .recipe-details-stepsBtn
     {
-        margin:10px;
-        margin-left: 55%;
+        margin-top: 15px;
     }
+}
+.recipe-details-makingtime
+{
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.recipe-details-makingtime p
+{
+    margin-bottom: 0;
 }
