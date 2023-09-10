@@ -2,6 +2,8 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 import Navbar from './Component/Navbar/Navbar'
 import Footer from './Component/Footer/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 

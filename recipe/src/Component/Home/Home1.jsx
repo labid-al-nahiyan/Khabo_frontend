@@ -234,98 +234,7 @@ const Home1 = () => {
       </ScrollCarousel>
     </>
         </div>
-        {/* <div className="embla mt-4" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-auto-play-interval="5" data-draggable="true">
-            <div className="embla__viewport container-fluid">
-                <div className="embla__container">
-                    
-                    
-                    
-                    <div className="embla__slide slider-image item active" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
-                        <div className="slide-content">
-                            <div className="item-img">
-                                <div className="item-wrapper">
-                                    <img src="assets/images/simply-recipes-veggie-tacos-lead-3-18763af09863424a87a662923de82b5e.webp" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0"/>
-                                </div>
-                            </div>
-                            <div className="item-content">
-                                <h5 className="item-title mbr-fonts-style display-5"><strong>Veggie Tacos</strong></h5>
-                                <h6 className="item-subtitle mbr-fonts-style mt-1 display-7">Made with zucchini, tomatoes, green chiles</h6>
-                                <p className="mbr-text mbr-fonts-style mt-3 display-7">The key to the overall taste is the addition at the end of cotija cheese, a Mexican cheese that is salty and crumbly, much like Greek feta.<br/></p>
-                            </div>
-                            <div className="mbr-section-btn item-footer mt-2"><a href="details.html" className="btn item-btn btn-black display-7" target="_blank">View Details</a></div>
-                        </div>
-                    </div>
-                    <div className="embla__slide slider-image item active" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
-                        <div className="slide-content">
-                            <div className="item-img">
-                                <div className="item-wrapper">
-                                    <img src="assets/images/simply-recipes-fried-green-tomato-lead-4b-7ba7280edfaa462a9ac76863112a973f.webp" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1"/>
-                                </div>
-                            </div>
-                            <div className="item-content">
-                                <h5 className="item-title mbr-fonts-style display-5"><strong>Fried Tomatoes</strong></h5>
-                                <h6 className="item-subtitle mbr-fonts-style mt-1 display-7">Fried green tomatoes are a classNameic Southern dish</h6>
-                                <p className="mbr-text mbr-fonts-style mt-3 display-7">Curious as usual, we found some big green tomatoes at the farmers market last weekend and just had to try these fried green tomatoes.<br/><br/></p>
-                            </div>
-                            <div className="mbr-section-btn item-footer mt-2"><a href="details.html" className="btn item-btn btn-black display-7" target="_blank">View Details</a></div>
-                        </div>
-                    </div>
-                    <div className="embla__slide slider-image item active" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
-                        <div className="slide-content">
-                            <div className="item-img">
-                                <div className="item-wrapper">
-                                    <img src="assets/images/simply-recipes-grilled-meatballs-lead-01-facb584be3124edab764bb77cf30bbef.webp" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2"/>
-                                </div>
-                            </div>
-                            <div className="item-content">
-                                <h5 className="item-title mbr-fonts-style display-5"><strong>Grilled Meatballs</strong></h5>
-                                <h6 className="item-subtitle mbr-fonts-style mt-1 display-7">These juicy meatballs take just 10 minutes to cook</h6>
-                                <p className="mbr-text mbr-fonts-style mt-3 display-7">To keep the meatballs as moist as possible, I start with a mixture of baking soda and lemon juice. Baking soda, otherwise known as sodium bicarbonate.<br/></p>
-                            </div>
-                            <div className="mbr-section-btn item-footer mt-2"><a href="details.html" className="btn item-btn btn-black display-7" target="_blank">View Details</a></div>
-                        </div>
-                    </div>
-                    <div className="embla__slide slider-image item active" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
-                        <div className="slide-content">
-                            <div className="item-img">
-                                <div className="item-wrapper">
-                                    <img src="assets/images/simply-recipes-chicken-provencal-lead-1-3261f35977254266843d379871a9b907.webp" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3"/>
-                                </div>
-                            </div>
-                            <div className="item-content">
-                                <h5 className="item-title mbr-fonts-style display-5"><strong>Chicken Provencal</strong></h5>
-                                <h6 className="item-subtitle mbr-fonts-style mt-1 display-7">With tomatoes, capers, olives, white wine, and lemon</h6>
-                                <p className="mbr-text mbr-fonts-style mt-3 display-7">Chicken Provencal is a regional French recipe that can take on many forms. There is no one absolute recipe for Chicken Provencal.<br/></p>
-                            </div>
-                            <div className="mbr-section-btn item-footer mt-2"><a href="details.html" className="btn item-btn btn-black display-7" target="_blank">View Details</a></div>
-                        </div>
-                    </div>
-                    <div className="embla__slide slider-image item active" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
-                        <div className="slide-content">
-                            <div className="item-img">
-                                <div className="item-wrapper">
-                                    <img src="assets/images/simply-recipes-smash-burger-lead-03-f86c429469784ea789e52e3c42f1da37.webp" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4"/>
-                                </div>
-                            </div>
-                            <div className="item-content">
-                                <h5 className="item-title mbr-fonts-style display-5"><strong>Smashburger</strong></h5>
-                                <h6 className="item-subtitle mbr-fonts-style mt-1 display-7">All you need is your stovetop to make the perfect Smashburger</h6>
-                                <p className="mbr-text mbr-fonts-style mt-3 display-7">The Smashburger is cooked over high heat with a lot of pressure, which helps the beef develop a deep, rich crust.&nbsp;<br/></p>
-                            </div>
-                            <div className="mbr-section-btn item-footer mt-2"><a href="details.html" className="btn item-btn btn-black display-7" target="_blank">View Details</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button className="embla__button embla__button--prev">
-                <span className="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
-                <span className="sr-only visually-hidden visually-hidden">Previous</span>
-            </button>
-            <button className="embla__button embla__button--next">
-                <span className="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
-                <span className="sr-only visually-hidden visually-hidden">Next</span>
-            </button>
-        </div> */}
+        
     </div>
 </section>
 
@@ -381,75 +290,13 @@ const Home1 = () => {
     </div>
 </section>
 
-<section data-bs-version="5.1" className="footer3 cid-tKwqtlEDrL" once="footers" id="footer3-5">
 
     
 
     
 
-    <div className="container">
-        <div className="media-container-row align-center mbr-white">
-            <div className="row row-links">
-                <ul className="foot-menu">
-                    
-                    
-                    
-                    
-                    
-                <li className="foot-menu-item mbr-fonts-style display-7">
-                        <a className="text-white" href="#" target="_blank">About us</a>
-                    </li><li className="foot-menu-item mbr-fonts-style display-7">
-                        <a className="text-white" href="#" target="_blank">Services</a>
-                    </li><li className="foot-menu-item mbr-fonts-style display-7">
-                        <a className="text-white" href="#" target="_blank">Contact Us</a>
-                    </li><li className="foot-menu-item mbr-fonts-style display-7">
-                        <a className="text-white" href="#" target="_blank">Careers</a>
-                    </li><li className="foot-menu-item mbr-fonts-style display-7">
-                        <a className="text-white" href="#" target="_blank">Work</a>
-                    </li></ul>
-            </div>
-            <div className="row social-row">
-                <div className="social-list align-right pb-2">
-                    
-                    
-                    
-                    
-                    
-                    
-                <div className="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
-                            <span className="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div className="soc-item">
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                            <span className="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div className="soc-item">
-                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
-                            <span className="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div className="soc-item">
-                        <a href="https://instagram.com/mobirise" target="_blank">
-                            <span className="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div className="soc-item">
-                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
-                            <span className="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div className="soc-item">
-                        <a href="https://www.behance.net/Mobirise" target="_blank">
-                            <span className="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div></div>
-            </div>
-            <div className="row row-copirayt">
-                <p className="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                    © Copyright 2023 Team Khabo. All Rights Reserved.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    
+
       </div>
     );
   };
