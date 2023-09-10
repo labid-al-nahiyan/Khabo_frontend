@@ -4,7 +4,6 @@ import './Recipe.css'
 import UserFeedback from "../UserFeedback/UserFeedback";
 
 export const recipeLoader = async ({ params }) => {
-    console.log("param : "+params.id);
     const res = await fetch(`https://khabo.pythonanywhere.com/recipes/${params.id}`);
     const resJson = await res.json();
   
@@ -13,7 +12,6 @@ export const recipeLoader = async ({ params }) => {
 
 const Recipe = () => {
    const recipe = useLoaderData();
-   console.log(recipe)
    
     return (
         <div className="recipe-container">
