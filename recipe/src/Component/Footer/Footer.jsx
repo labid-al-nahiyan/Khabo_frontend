@@ -3,12 +3,10 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-    <div className="footer">
-           
-
+    <div className="footer">       
         <Container>
-            <Row>
-                <ul className="foot-menu"> 
+            <Row >
+                <ul> 
                     <li className="foot-menu-item mbr-fonts-style display-7">
                         <a className="text-white" href="#" target="_blank">About us</a>
                     </li><li className="foot-menu-item mbr-fonts-style display-7">
@@ -51,7 +49,7 @@ const Footer = () => {
                     </div></div>
             </Row>
             <Row>
-                <p className="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                <p style={{color:"white",fontSize:"20px"}}>
                     © Copyright 2023 Team Khabo. All Rights Reserved.
                 </p>
             </Row>

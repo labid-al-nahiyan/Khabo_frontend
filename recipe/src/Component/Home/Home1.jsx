@@ -1,6 +1,8 @@
 import ScrollCarousel from 'scroll-carousel-react';
 import RecipeCart from '../RecipeCart/RecipeCart';
 import HomeCarausel from '../HomeCarousel/HomeCarausel';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Grid } from '@mui/material';
 
 const Home1 = () => {
     const recipes = [
@@ -155,62 +157,57 @@ const Home1 = () => {
 
 
 
-    <HomeCarausel></HomeCarausel>
-
-
-<section data-bs-version="5.1" className="features1 cid-tKwpIvCF03" id="features1-2">
-
-    <div className="container">
-        <div className="row">
-            <div className="col-12 col-lg-9">
-                <h3 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                    <strong>Features</strong>
-                </h3>
-                
-            </div>
-        </div>
-        <div className="row">
-            <div className="card col-12 col-md-6 col-lg-3">
-                <div className="card-wrapper">
-                    <div className="card-box align-center">
-                        <div className="iconfont-wrapper">
-                            <span className="mbr-iconfont mobi-mbri-search mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
-                        </div>
-                        <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Description</strong></h5>
-                        <p className="card-text mbr-fonts-style display-7">Can't remember the exact name of a recipe or don't know a recipe of an amazing food you have eaten in restaurant? No worry, just describe it.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="card col-12 col-md-6 col-lg-3">
-                <div className="card-wrapper">
-                    <div className="card-box align-center">
-                        <div className="iconfont-wrapper">
-                            <span className="mbr-iconfont mobi-mbri-apple mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
-                        </div>
-                        <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Ingredients</strong></h5>
-                        <p className="card-text mbr-fonts-style display-7">Have some leftover random ingredients in your pantry, You want the test of some ingredients in your food but don't know the recipe?</p>
-                    </div>
-                </div>
-            </div>
-            <div className="card col-12 col-md-6 col-lg-3">
-                <div className="card-wrapper">
-                    <div className="card-box align-center">
-                        <div className="iconfont-wrapper">
-                            <span className="mbr-iconfont mobi-mbri-edit-2 mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
-                        </div>
-                        <h5 className="card-title mbr-fonts-style display-7"><strong>Add Your Own Recipe</strong></h5>
-                        <p className="card-text mbr-fonts-style display-7">An awesome recipe you want to share with our amazing community? Don't wait further, start writing.&nbsp;</p>
-                    </div>
-                </div>
-            </div>
+        <HomeCarausel></HomeCarausel>
+   
+        <Container >
             
-        </div>
-    </div>
-</section>
+            <Row>
+                <Col >
+                    <h3 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Features</strong>
+                    </h3>
+                    
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={6} lg={3}>
+                    <div className="card-wrapper">
+                        <div className="card-box align-center">
+                            <div className="iconfont-wrapper">
+                                <span className="mbr-iconfont mobi-mbri-search mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            </div>
+                            <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Description</strong></h5>
+                            <p className="card-text mbr-fonts-style display-7">Can't remember the exact name of a recipe or don't know a recipe of an amazing food you have eaten in restaurant? No worry, just describe it.</p>
+                        </div>
+                    </div>
+                </Col>
+                <Col  xs={12} md={6} lg={3}>
+                    <div className="card-wrapper">
+                        <div className="card-box align-center">
+                            <div className="iconfont-wrapper">
+                                <span className="mbr-iconfont mobi-mbri-apple mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            </div>
+                            <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Ingredients</strong></h5>
+                            <p className="card-text mbr-fonts-style display-7">Have some leftover random ingredients in your pantry, You want the test of some ingredients in your food but don't know the recipe?</p>
+                        </div>
+                    </div>
+                </Col>
+                <Col  xs={12} md={6} lg={3}>
+                    <div className="card-wrapper">
+                        <div className="card-box align-center">
+                            <div className="iconfont-wrapper">
+                                <span className="mbr-iconfont mobi-mbri-edit-2 mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            </div>
+                            <h5 className="card-title mbr-fonts-style display-7"><strong>Add Your Own Recipe</strong></h5>
+                            <p className="card-text mbr-fonts-style display-7">An awesome recipe you want to share with our amazing community? Don't wait further, start writing.&nbsp;</p>
+                        </div>
+                    </div>
+                </Col>
+                
+            </Row>
+        </Container>
 
-<section data-bs-version="5.1" className="slider5 mbr-embla cid-tKwpYNjefB mbr-parallax-background" id="slider5-3">
     
-    <div className="mbr-overlay"></div>
     <div className="position-relative">
         <div className="mbr-section-head">
             <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Popular Recipes</strong></h4>
@@ -219,11 +216,12 @@ const Home1 = () => {
         <div>
         <>
       <h1>This is my component page</h1>
-      <p>Now i am showing my creation scroll carousel</p>
+
       <ScrollCarousel
         autoplay
         autoplaySpeed={8}
         speed={7}
+        autoplayHoverPause:true
         onReady={() => console.log('I am ready')}
       >
             {recipes.map((recipe,index) => (
@@ -236,25 +234,13 @@ const Home1 = () => {
         </div>
         
     </div>
-</section>
-
-<section data-bs-version="5.1" className="features23 cid-tKwqlJtm4y" id="features23-4">
-
-    
-
-    
-    
-    <div className="container">
-        <div className="card-wrapper">
-            <div className="card-box align-left">
                 
-                
-                
-            </div>
-        </div>
+    
+    <Container style={{border:"1px solid red"}} className='m-5' >
+        
        
-        <div className="row justify-content-center content-row mt-4">
-            <div className="card p-4 p-md-3 col-md-6 col-lg-4">
+        <Row className="justify-content-center content-row mt-4"  >
+            <Col className="p-4 p-md-3" lg={4} md={6} >
                 <div className="card-box">
                     <div className="title">
                         <span className="num mbr-fonts-style display-2"><strong>1,000,000</strong></span>
@@ -262,8 +248,8 @@ const Home1 = () => {
                     <h4 className="card-title mbr-fonts-style display-5"><strong>Users</strong></h4>
                     <p className="mbr-text card-text mbr-fonts-style display-7">In Khabo, we have more than 1 million users continuously sharing and receiving recipes</p>
                 </div>
-            </div>
-            <div className="card p-4 p-md-3 col-md-6 col-lg-4">
+            </Col>
+            <Col className="p-4 p-md-3" lg={4} md={6}>
                 <div className="card-box">
                     <div className="title">
                         <span className="num mbr-fonts-style display-2"><strong>5,000</strong></span>
@@ -271,8 +257,8 @@ const Home1 = () => {
                     <h4 className="card-title mbr-fonts-style display-5"><strong>Recipes</strong></h4>
                     <p className="mbr-text card-text mbr-fonts-style display-7">We have more than 5,000 recipes of all kinds. You will always find something you like</p>
                 </div>
-            </div>
-            <div className="card p-4 p-md-3 col-md-6 col-lg-4">
+            </Col>
+            <Col className="p-4 p-md-3" lg={4} md={6}>
                 <div className="card-box">
                     <div className="title">
                         <span className="num mbr-fonts-style display-2"><strong>100</strong></span>
@@ -280,15 +266,11 @@ const Home1 = () => {
                     <h4 className="card-title mbr-fonts-style display-5"><strong>Shops</strong></h4>
                     <p className="mbr-text card-text mbr-fonts-style display-7">We are affiliated with more than 100 shops who will always give you the best ingredient deals</p>
                 </div>
-            </div>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</section>
+            </Col>
+    
+        </Row>
+
+    </Container>
 
 
     
