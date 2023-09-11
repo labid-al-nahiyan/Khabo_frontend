@@ -1,8 +1,8 @@
-/* Navbar.css */
-.navbar {
+.navbar-container{
     background-color: red;
     color: #000000;
     padding: 0;
+    
 }
   
 .navbar_container
@@ -10,7 +10,11 @@
     display: flex;
     justify-content: space-between;
     background-color: #ffe161;
-    width: 100%;
+    align-items: center;
+  
+    padding: 15px;
+    margin: 0;
+  
 }
 .logo-container
 {
@@ -49,7 +53,9 @@
     font-size: 20px; 
     height: 100%;
     text-decoration: none;
-    align-items: stretch;
     justify-content: flex-end;
-    padding: 0 10px;
+    align-items: center;
+}
+.nav-item{
+  padding-left: 15px;
 }

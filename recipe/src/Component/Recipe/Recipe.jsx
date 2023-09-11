@@ -44,7 +44,7 @@ const Recipe = () => {
                             </div>
                         </div>
                         <div className="recipe-details-stepsBtn">
-                            <button>Process to steps</button>
+                            <Link to={`/recips/${recipe.id}/steps`}><button>Process to steps</button></Link>
                         </div>
                     </div>
                 </div>

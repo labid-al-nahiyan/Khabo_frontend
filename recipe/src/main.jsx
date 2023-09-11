@@ -10,11 +10,15 @@ import {
 import SearchByIngredient from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import './index.css'
 import App from './App.jsx';
-import { Home } from '@mui/icons-material';
 import Home1 from './Component/Home/Home1.jsx';
 import Recipe from './Component/Recipe/Recipe.jsx';
 import { recipeLoader } from './Component/Recipe/Recipe.jsx';
 import SearchByDescription from './Component/SearchByDescription/SearchByDescription.jsx';
+
+import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
+import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
+import SignUp from './Component/SignUp/SignUp.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -42,6 +46,17 @@ const router = createBrowserRouter([
         element : <Recipe></Recipe>,
         loader : recipeLoader,
       },
+
+      {
+        path : "/recips/:id/steps",
+        element : <RecipeSteps/>,
+        loader : recipeStepsLoader,
+      },
+      {
+        path : "/signup",
+        element : <SignUp/>,
+      },
+
     ],
   },
 ]);
