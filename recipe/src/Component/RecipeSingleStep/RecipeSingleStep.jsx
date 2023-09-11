@@ -4,12 +4,16 @@ const RecipeSingleStep = ({step,recipeid}) => {
     console.log(step)
     return (
         <div className="single-step-container">
-            <div className="single-step-image">
+            {/* <div className="single-step-image">
                 {(step.step_images.length==0)?"":<img src={step.step_images[0].image.image_path} alt="" />}
-            </div>
+            </div> */}
             <div className="single-step-details">
-                <h2>Step : {step.step_no}</h2>
+                <div className="single-step-details-1">
+                <h2>Step {step.step_no} </h2>
+                </div>
+                <div className="single-step-details-2">
                 <p>{step.descriptions}</p>
+                </div>
             </div>
         </div>
     );

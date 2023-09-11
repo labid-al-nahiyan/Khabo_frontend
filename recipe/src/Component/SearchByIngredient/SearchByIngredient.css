@@ -6,6 +6,7 @@
     background-image: url("https://img.freepik.com/free-photo/top-view-egg-toasts-with-tomatoes-seasonings-white-background-photo-morning-breakfast-lunch-salad-color-food_140725-159325.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=ais");
     background-size: cover; /* Optional: Adjust the image size */
     background-repeat: no-repeat; 
+    min-height: 590px;
     
     
 }

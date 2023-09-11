@@ -2,6 +2,8 @@ import { checkPropTypes } from "prop-types";
 import { Link, useLoaderData } from 'react-router-dom';
 import './Recipe.css'
 import UserFeedback from "../UserFeedback/UserFeedback";
+import RecipeSteps from "../RecipeSteps/RecipeSteps";
+import { useState } from "react";
 
 export const recipeLoader = async ({ params }) => {
     const res = await fetch(`https://khabo.pythonanywhere.com/recipes/${params.id}`);
@@ -12,6 +14,7 @@ export const recipeLoader = async ({ params }) => {
 
 const Recipe = () => {
    const recipe = useLoaderData();
+   const [clicked,setClicked] = useState(false);
    
     return (
         <div className="recipe-container">
@@ -56,11 +59,20 @@ const Recipe = () => {
                             </div>
                         </div>
                         <div className="recipe-details-stepsBtn">
-                            <Link to={`/recips/${recipe.id}/steps`}><button>Process to steps</button></Link>
+                            {/* <Link to={`/recips/${recipe.id}/steps`}><button>Process to steps</button></Link> */}
+                            <button onClick={()=>setClicked(true)}>Process to steps</button>
                         </div>
+                    </div>
+
+                    <div>
+
                     </div>
                 </div>
             </div>
+            
+            </div>
+            <div className="recipe-show-steps" >
+                {clicked&&<RecipeSteps id={recipe.id} steps={recipe.steps}></RecipeSteps>}
             </div>
             <div className="recipe-feedback">
                 <UserFeedback feedbacks = {recipe.feedback}></UserFeedback>

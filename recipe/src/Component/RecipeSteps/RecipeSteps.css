@@ -16,3 +16,10 @@
     filter: none;
   }
   
+  .recipe-steps-container
+  {
+    height: 200px;
+    text-align: center;
+    background-color: #cac9c9;
+    margin: 0 20px;
+  }

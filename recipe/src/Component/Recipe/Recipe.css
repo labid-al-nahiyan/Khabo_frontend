@@ -91,5 +91,10 @@
 }
 .recipe-ingredients li
 {
-    padding: 5px;
+    padding: 5px ;
+}
+.recipe-show-steps
+{
+    text-align: center;
+    margin:  0 10px;
 }

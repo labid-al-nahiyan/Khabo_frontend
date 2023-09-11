@@ -36,27 +36,25 @@ const Navbar = () => {
                             <Link to="/create" className="nav-item">Create</Link>
                         </li>
 
-                        {(authState.logged==false) 
-                      && <li className='nav-item'>
-                      <Link to='/signup'><button>Sign Up</button></Link>
-                        </li>}
-                        {(authState.logged==false) 
-                      && <li className='nav-item'>
-                      <Link to='/signin'><button>Login</button></Link>
-                        </li>}
-                        {(authState.logged==true) 
-                      && <li className='nav-item'>
-                      <Link to='/profile'><button>Profile</button></Link>
-                        </li>}
+                        {(authState.logged==false)&& 
+                            <li className='nav-item'>
+                                <Link to='/signup'><button>Sign Up</button></Link>
+                            </li>
+                        }
+                        {(authState.logged==false) && 
+                            <li className='nav-item'>
+                                <Link to='/signin'><button>Login</button></Link>
+                            </li>}
+                        {(authState.logged==true) && 
+                            <li className='nav-item'>
+                                <Link to='/profile'><button>Profile</button></Link>
+                            </li>}
                         {(authState.logged==true) 
                       && <li className='nav-item'>
                       <button onClick={logOut}>Logout</button>
                         </li>}
 
-                        <li className='nav-item'>
-                            <Link to='/signup' className="nav-item"><button>Sign Up</button></Link>
-                        </li>
-
+                        
                     </ul>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import axios from 'axios';
 import ShowRecipe from '../ShowRecipe/ShowRecipe';
 import './SearchByDescription.css'
@@ -7,6 +7,8 @@ const SearchByDescription = () => {
 
   const [description, setDescription] = useState("");
   const [recipeList, setRecipeList] = useState([]);
+
+  const ref = useRef(null)
 
   // Handle textarea change and update the description state
   const handleDescriptionChange = (event) => {
@@ -27,6 +29,8 @@ const SearchByDescription = () => {
        .then((response) => {
          console.log(response.data);
          setRecipeList(response.data);
+         ref.current?.scrollIntoView({ behavior: 'smooth' });
+
        })
        .catch((error) => {
          console.error("Error fetching data:", error);
@@ -52,35 +56,38 @@ const SearchByDescription = () => {
                               <h5 className='pb-4'>Give a relevant name for the food you want to search for. And give a brief description of the recipe and ingredients.</h5>
                             </div>
                         </div>
-                        <div className="col-lg-12 col-md-12 col-12 form-group mb-3" data-for="email">
-                            <textarea id="txtid" className="form-control" name="txtname" rows="4" cols="50" maxlength="200" placeholder="Give The Recipe Description"
+                        <div className="col-12 form-group mb-3" data-for="email" style={{width:'100%'}}>
+                            <textarea id="txtid" className="form-control" name="txtname" rows="4" cols="50"  placeholder="Give The Recipe Description"
                             value={description} // Bind the value to the state
                             onChange={handleDescriptionChange} // Handle textarea changes 
                             ></textarea>
                         </div>
-                        <div className="col-12 col-md-auto mbr-section-btn">
+                        <div className="col-12 col-md-auto ">
                           <button  onClick={clearTextarea}>Clear</button>
                         </div>
-                        <div className="col-12 col-md-auto mbr-section-btn">
+                        <div className="col-12 col-md-auto pb-4">
                           <button  onClick={searchWithDescription}>Search!</button>
                         </div>
                 </div>
             </div>
             <div className="col-lg-7 offset-lg-1 col-12">
-                <div className="image-wrapper">
+                {/* <div className="image-wrapper">
 
                     <img className="w-100" src="../../assets/images/mbr-3.jpg" alt="Mobirise Website Builder" />
 
-                    {/* <img className="w-100" src="https://img.freepik.com/premium-photo/different-cooking-ingredients-spices-white-background_185193-88914.jpg" alt="Mobirise Website Builder" /> */}
-
-                </div>
+                     <img className="w-100" src="https://img.freepik.com/premium-photo/different-cooking-ingredients-spices-white-background_185193-88914.jpg" alt="Mobirise Website Builder" />
+                
+                 </div>  */}
             </div>
         </div>
     </div>
 
 {/* ---------------------------------------------------------------------------------------------------- */}
 
+        <div ref={ref}>
         <ShowRecipe recipes={recipeList}></ShowRecipe>
+
+        </div>
 {/* ---------------------------------------------------------------------------------------------------- */}
 
       </div>

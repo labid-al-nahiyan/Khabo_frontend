@@ -2,7 +2,7 @@ import './SearchByIngredient.css'
 
 import SelectIngredients from '../SelectIngredients/SelectIngredients';
 import ShowRecipe from '../ShowRecipe/ShowRecipe';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
 
@@ -18,6 +18,7 @@ function SearchByIngredient() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipe] = useState([]);
   const availableIngredients = useLoaderData();
+  const ref = useRef(null);
 
   useEffect(
     function onChange() {
@@ -29,6 +30,8 @@ function SearchByIngredient() {
         .then((response) => {
           console.log(response.data);
           setRecipe(response.data);
+          ref.current?.scrollIntoView({ behavior: 'smooth' });
+
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -57,7 +60,9 @@ function SearchByIngredient() {
           <SelectIngredients setIngredients={setIngredients} ingredients = {availableIngredients}></SelectIngredients>
         </div>
       </div>
-      <ShowRecipe recipes={recipes}></ShowRecipe>
+      <div ref={ref}>
+            <ShowRecipe recipes={recipes}></ShowRecipe>
+      </div>
     </div>
     
   );

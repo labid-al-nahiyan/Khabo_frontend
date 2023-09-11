@@ -3,6 +3,7 @@ import './RecipeSteps.css'
 import { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import RecipeSingleStep from '../RecipeSingleStep/RecipeSingleStep';
+import { checkPropTypes } from 'prop-types';
 
 export const recipeStepsLoader = async ({ params }) => {
     console.log(params)
@@ -11,8 +12,8 @@ export const recipeStepsLoader = async ({ params }) => {
   
     return resJson;
   };
-const RecipeSteps = () => {
-    const {steps,id} = useLoaderData();
+const RecipeSteps = ({steps,id}) => {
+   // const {steps,id} = useLoaderData();
     console.log(id)
     const [index, setIndex] = useState(0);
 
@@ -23,10 +24,8 @@ const RecipeSteps = () => {
 
     console.log(steps)
     return (
-        <div>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-                
-            
+        <div className='recipe-steps-container'>
+            <Carousel  onSelect={handleSelect} controls={true}>
                 {
                     steps.map((step,index)=>{
                     return <Carousel.Item key={index}>
@@ -42,5 +41,10 @@ const RecipeSteps = () => {
         </div>
     );
 };
+
+RecipeSteps.propTypes = {
+    steps: checkPropTypes.Array,
+    id : checkPropTypes.number
+}
 
 export default RecipeSteps;
