@@ -55,11 +55,7 @@ const SelectIngredients = ({setIngredients,ingredients}) => {
 
     return (
         <div className='ingredientListContainer'>
-            <div style={{textAlign:'start',paddingLeft:'100px'}}>
-
-                <h3 style={{}}>Add the ingredients for which you want your recipe based on</h3>
-
-            </div>
+            
         { 
         inputValues.map((value, index) => {         
             return  <div key={index} className="added_ingredient_name"> 

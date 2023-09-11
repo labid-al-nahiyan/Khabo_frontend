@@ -42,15 +42,18 @@ function SearchByIngredient() {
   return (
     <div>
       <div className='searchByIngredientContainer'>
-        <div>
-
+        <div className='searchByIngredient-left'>
         </div>
-        <div>
-          <div style={{textAlign:'start',height:'60px',paddingLeft:'160px'}}>
-            <h1 style={{marginBottom:0}}>Give </h1>
-            <h1 style={{margin:0}}>Ingredients:</h1>
+        <div className='searchByIngredient-right slide-in'>
+          <div style={{textAlign:'start',height:'100px',paddingLeft:'160px'}}>
+            <h1 style={{marginBottom:0}}><strong>Give</strong> </h1>
+            <h1 style={{margin:0}}><strong>Ingredients:</strong></h1>
           </div>
-          
+          <div style={{textAlign:'start',marginLeft:'24%'}}>
+
+                <h5 style={{color:'#1a1a1a'}}>Add the ingredients for which you want your recipe based on</h5>
+
+          </div>
           <SelectIngredients setIngredients={setIngredients} ingredients = {availableIngredients}></SelectIngredients>
         </div>
       </div>

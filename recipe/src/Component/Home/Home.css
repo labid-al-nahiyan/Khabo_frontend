@@ -7,7 +7,7 @@
 .feature-show-container
 {
     background-color: #9FDBF8;
-    padding: 30px;
+    padding: 10px;
 }
 .single-feature
 {
@@ -34,4 +34,12 @@
     margin: 0 ;
     text-align: center;
 }
-  
+.home_scroll
+{
+    margin-top: 30px;
+}
+.home_scroll_header h1
+{
+    font-weight:bolder;
+    font-size:50px;
+}

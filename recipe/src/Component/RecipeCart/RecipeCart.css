@@ -1,8 +1,8 @@
 .single_recipeCart
 {
-    display: flex;
-    flex-direction: column;
-    border-radius: 50%;
+    display: grid;
+    grid-template-rows: 46% auto;
+    border-radius: 10px;
     height: 500px;
     margin: 10px;
     min-width: 300px;
@@ -13,7 +13,6 @@
     overflow: hidden;
 }
 .single_recipeCart_img img {
-    height: 100%; 
     width: 100%; 
 }
 .single_recipeCart_description

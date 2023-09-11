@@ -1,0 +1,26 @@
+.carouselcustomItem
+{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq843i2nuaWDPsnZ5ok9AHgvLWHcvh2v7drw&usqp=CAU');
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; 
+    display: flex;
+}
+.caroselcustomItem-right
+{
+    width: 50%;
+    background-color: rgba(255, 255, 255,.6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.caroselcustomItem-left
+{
+    display: flex;
+    justify-content: center;
+}
+.caroselcustomItem-left img
+{
+    height: 100%;
+}

@@ -73,19 +73,17 @@ const Home1 = () => {
         </Container>
       </div>
 
-    <div>
-        <div className="mbr-section-head">
-            <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Popular Recipes</strong>
-            </h4>  
+    <div className='home_scroll'>
+        <div className="home_scroll_header">
+            <h1><strong>Popular Recipes</strong>
+            </h1>  
         </div>
         <div>
         <>
 
       <ScrollCarousel
-        autoplay
-        autoplaySpeed={8}
+        autoplaySpeed={0}
         speed={7}
-        autoplayHoverPause:true
         onReady={() => console.log('I am ready')}
       >
             {recipes.map((recipe,index) => (
