@@ -15,6 +15,7 @@ import Recipe from './Component/Recipe/Recipe.jsx';
 import { recipeLoader } from './Component/Recipe/Recipe.jsx';
 import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
 import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
+import SignUp from './Component/SignUp/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         path : "/recips/:id/steps",
         element : <RecipeSteps/>,
         loader : recipeStepsLoader,
+      },
+      {
+        path : "/signup",
+        element : <SignUp/>,
       },
 
     ],
