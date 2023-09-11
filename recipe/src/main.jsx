@@ -14,6 +14,7 @@ import { Home } from '@mui/icons-material';
 import Home1 from './Component/Home/Home1.jsx';
 import Recipe from './Component/Recipe/Recipe.jsx';
 import { recipeLoader } from './Component/Recipe/Recipe.jsx';
+import SearchByDescription from './Component/SearchByDescription/SearchByDescription.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path : "/search/byDescription",
-        element : <SearchByIngredient/>
+        element : <SearchByDescription/>
       },
       {
         path : "/create",
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         path : "/recips/:id",
         element : <Recipe></Recipe>,
         loader : recipeLoader,
-      }
+      },
     ],
   },
 ]);
