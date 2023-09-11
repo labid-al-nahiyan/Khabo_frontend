@@ -16,7 +16,7 @@ const RecipeCart = (props) => {
                     <h3>{recipe.title}</h3>
                 </div>
                 <div className="recipeCart_proc">
-                    <p>{recipe.description} <span className="cart_readMore"><Link to={`/recips/${recipe.id}`}>Read more..</Link></span></p>
+                    <p>{recipe.description.substring(0, 200)}... <span className="cart_readMore"><Link to={`/recips/${recipe.id}`}>Read more</Link></span></p>
                 </div>
            </div>
         </div>

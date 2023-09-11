@@ -21,10 +21,9 @@ const SearchByDescription = () => {
   const searchWithDescription = () => {
        console.log(description);
 
-        axios.get("https://khabo.pythonanywhere.com/recipes/search_by_description/",{
-        params: {
+        axios.post("https://khabo.pythonanywhere.com/recipes/search_by_description/",{
+        
             description: description, // Pass the description as a query parameter
-          },
          
        })
        .then((response) => {

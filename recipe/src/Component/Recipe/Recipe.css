@@ -75,3 +75,21 @@
 {
     margin-bottom: 0;
 }
+.recipe-ingredients
+{
+    max-height: 250px;
+    overflow: auto;
+    border: 1px solid green;
+
+}
+.recipe-ingredients ul
+{
+    width: 100%;
+    list-style: square;
+    display: flex;
+    flex-direction: column;
+}
+.recipe-ingredients li
+{
+    padding: 5px;
+}

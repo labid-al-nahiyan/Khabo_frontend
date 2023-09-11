@@ -17,6 +17,7 @@ import SearchByDescription from './Component/SearchByDescription/SearchByDescrip
 
 import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
 import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
+import { ingredientsLoader } from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import SignUp from './Component/SignUp/SignUp.jsx';
 
 
@@ -31,7 +32,8 @@ const router = createBrowserRouter([
       },
       {
         path : "/search/byIngredients",
-        element : <SearchByIngredient/>
+        element : <SearchByIngredient/>,
+        loader : ingredientsLoader,
       },
       {
         path : "/search/byDescription",

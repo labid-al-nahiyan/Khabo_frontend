@@ -4,21 +4,27 @@ import SelectIngredients from '../SelectIngredients/SelectIngredients';
 import ShowRecipe from '../ShowRecipe/ShowRecipe';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useLoaderData } from 'react-router-dom';
 
+export const ingredientsLoader = async () => {
+  const res = await fetch(`https://khabo.pythonanywhere.com/ingredients`);
+  const resJson = await res.json();
+  console.log(resJson)
+  return resJson;
+};
 
 function SearchByIngredient() {
     
-  const [ingredients, setIngredients] = useState(["Egg","Beef"]);
+  const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipe] = useState([]);
-
+  const availableIngredients = useLoaderData();
 
   useEffect(
     function onChange() {
        console.log("parent")
-       const dataToSend = ["turmeric","Salt"];
        axios.post("https://khabo.pythonanywhere.com/recipes/search_by_ingredients/",
        {
-        ingredients:dataToSend
+        ingredients:ingredients
        })
         .then((response) => {
           console.log(response.data);
@@ -45,7 +51,7 @@ function SearchByIngredient() {
             <h1 style={{margin:0}}>Ingredients:</h1>
           </div>
           
-          <SelectIngredients setIngredients={setIngredients}></SelectIngredients>
+          <SelectIngredients setIngredients={setIngredients} ingredients = {availableIngredients}></SelectIngredients>
         </div>
       </div>
       <ShowRecipe recipes={recipes}></ShowRecipe>

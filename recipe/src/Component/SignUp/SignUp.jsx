@@ -1,40 +1,38 @@
 import  { useState } from 'react';
 import './SignUp.css'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
+    password_confirmation: '',
+    first_name : '',
+    last_name : ''
   });
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+    
   };
-
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
+    console.log(formData)
     e.preventDefault();
-    // Simulate a POST request to a backend server (replace with actual API call)
-    fetch('/api/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response from the server (e.g., display success message)
-        console.log(data);
-      })
-      .catch((error) => {
-        // Handle errors (e.g., display error message)
-        console.error(error);
-      });
+    axios.post("https://khabo.pythonanywhere.com/signup/",formData)
+        .then((response) => {
+          console.log(response.data);
+          navigate(-1);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
   };
 
   return (
@@ -64,12 +62,43 @@ function SignUp() {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            value={formData.first_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="firstName">Last Name:</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            value={formData.last_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
             name="password"
             value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="password">Confirm Password:</label>
+          <input
+            type="password"
+            id="password_confirmation"
+            name="password_confirmation"
+            value={formData.password_confirmation}
             onChange={handleChange}
             required
           />
