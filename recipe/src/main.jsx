@@ -19,7 +19,7 @@ import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
 import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
 import { ingredientsLoader } from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import SignUp from './Component/SignUp/SignUp.jsx';
-
+import { populerRecipeLoader } from './Component/Home/Home1.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,8 @@ const router = createBrowserRouter([
     children:[
       {
         path : "/",
-        element : <Home1/>
+        element : <Home1/>,
+        loader : populerRecipeLoader,
       },
       {
         path : "/search/byIngredients",

@@ -4,149 +4,18 @@ import HomeCarausel from '../HomeCarousel/HomeCarausel';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Home.css'
+import { useLoaderData } from 'react-router-dom';
+
+
+export const populerRecipeLoader = async () => {
+  const res = await fetch(`https://khabo.pythonanywhere.com/`);
+  const resJson = await res.json();
+  console.log(resJson)
+  return resJson;
+};
 
 const Home1 = () => {
-    const recipes = [
-        {
-          title: "Spaghetti Carbonara",
-          ingredients: [
-            "200g spaghetti",
-            "100g guanciale or pancetta, diced",
-            "2 large eggs",
-            "50g Pecorino Romano cheese, grated",
-            "50g Parmesan cheese, grated",
-            "2 cloves garlic, minced",
-            "Salt and black pepper to taste"
-          ],
-          description: "Boil spaghetti. Cook guanciale and garlic. Mix eggs and cheese. Combine all ingredients. Serve hot.",
-          recipe_image: "https://www.cookingclassy.com/wp-content/uploads/2020/10/spaghetti-carbonara-01.jpg"
-        },
-        {
-          title: "Chicken Alfredo",
-          ingredients: [
-            "8 oz fettuccine",
-            "2 boneless, skinless chicken breasts, sliced",
-            "2 cups heavy cream",
-            "1/2 cup butter",
-            "1 cup grated Parmesan cheese",
-            "2 cloves garlic, minced",
-            "Salt and black pepper to taste"
-          ],
-          description: "Cook fettuccine. Sauté chicken and garlic. Add cream and butter. Stir in cheese. Serve with cooked pasta.",
-          recipe_image: "https://www.budgetbytes.com/wp-content/uploads/2022/07/Chicken-Alfredo-bowl.jpg"
-        },
-        {
-          title: "Caesar Salad",
-          ingredients: [
-            "1 head romaine lettuce, chopped",
-            "1/2 cup Caesar dressing",
-            "1/4 cup grated Parmesan cheese",
-            "1 cup croutons",
-            "1/4 teaspoon black pepper",
-            "1/4 teaspoon salt"
-          ],
-          description: "Toss lettuce with dressing. Add cheese, croutons, salt, and pepper. Mix well and serve.",
-          recipe_image: "https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg"
-        },
-        {
-            title: "Chicken Tacos",
-            ingredients: [
-              "1 lb boneless, skinless chicken thighs, diced",
-              "1 packet taco seasoning",
-              "1 cup diced tomatoes",
-              "1/2 cup diced onions",
-              "1/2 cup shredded cheddar cheese",
-              "8 small taco shells",
-              "Lettuce, sour cream, and salsa for garnish"
-            ],
-            description: "Cook chicken with taco seasoning. Warm taco shells. Fill with chicken, tomatoes, onions, cheese, and garnish.",
-            recipe_image: "https://media.istockphoto.com/id/1265666630/photo/homemade-chicken-meixcan-street-tacos.jpg?s=612x612&w=0&k=20&c=njSh2RLoqz51W5UBX-Y4k5K4cZik9EXiqoUjPSpW4vw="
-        },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          },
-          {
-            title: "Vegetable Stir-Fry",
-            ingredients: [
-              "2 cups mixed vegetables (bell peppers, broccoli, carrots, snap peas)",
-              "1 lb tofu, cubed",
-              "3 cloves garlic, minced",
-              "2 tablespoons soy sauce",
-              "1 tablespoon vegetable oil",
-              "1 teaspoon sesame oil",
-              "Cooked rice for serving"
-            ],
-            description: "Sauté tofu and garlic in oils. Add vegetables and soy sauce. Cook until veggies are tender. Serve over rice.",
-            recipe_image: "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg"
-          }
-      ];
+    const recipes = useLoaderData();
   
   
 
@@ -231,41 +100,43 @@ const Home1 = () => {
     </div>
                 
     
-    <Container style={{border:"1px solid red"}} className='m-5' >
+    <div style={{display:'flex',justifyContent:'center'}}>
+        <Container className='m-5' >
+            
+          
+            <Row className="justify-content-center content-row mt-4"  >
+                <Col className="p-4 p-md-3" lg={4} md={6} >
+                    <div className="card-box" >
+                        <div className="title" >
+                            <h1 className='title_data'><strong>1,000,000</strong></h1>
+                        </div>
+                        <h4 className="card-title mbr-fonts-style display-5"><strong>Users</strong></h4>
+                        <p className="mbr-text card-text mbr-fonts-style display-7" style={{color:"gray"}}>In Khabo, we have more than 1 million users continuously sharing and receiving recipes</p>
+                    </div>
+                </Col>
+                <Col className="p-4 p-md-3" lg={4} md={6}>
+                    <div className="card-box">
+                        <div className="title">
+                            <h1 className='title_data'><strong>5,000</strong></h1>
+                        </div>
+                        <h4 className="card-title mbr-fonts-style display-5"><strong>Recipes</strong></h4>
+                        <p className="mbr-text card-text mbr-fonts-style display-7" style={{color:"gray"}}>We have more than 5,000 recipes of all kinds. You will always find something you like</p>
+                    </div>
+                </Col>
+                <Col className="p-4 p-md-3" lg={4} md={6}>
+                    <div className="card-box">
+                        <div className="title">
+                            <h1 className='title_data'><strong>100</strong></h1>
+                        </div>
+                        <h4 className="card-title mbr-fonts-style display-5"><strong>Shops</strong></h4>
+                        <p className="mbr-text card-text mbr-fonts-style display-7" style={{color:"gray"}}>We are affiliated with more than 100 shops who will always give you the best ingredient deals</p>
+                    </div>
+                </Col>
         
-       
-        <Row className="justify-content-center content-row mt-4"  >
-            <Col className="p-4 p-md-3" lg={4} md={6} >
-                <div className="card-box">
-                    <div className="title">
-                        <span className="num mbr-fonts-style display-2"><strong>1,000,000</strong></span>
-                    </div>
-                    <h4 className="card-title mbr-fonts-style display-5"><strong>Users</strong></h4>
-                    <p className="mbr-text card-text mbr-fonts-style display-7">In Khabo, we have more than 1 million users continuously sharing and receiving recipes</p>
-                </div>
-            </Col>
-            <Col className="p-4 p-md-3" lg={4} md={6}>
-                <div className="card-box">
-                    <div className="title">
-                        <span className="num mbr-fonts-style display-2"><strong>5,000</strong></span>
-                    </div>
-                    <h4 className="card-title mbr-fonts-style display-5"><strong>Recipes</strong></h4>
-                    <p className="mbr-text card-text mbr-fonts-style display-7">We have more than 5,000 recipes of all kinds. You will always find something you like</p>
-                </div>
-            </Col>
-            <Col className="p-4 p-md-3" lg={4} md={6}>
-                <div className="card-box">
-                    <div className="title">
-                        <span className="num mbr-fonts-style display-2"><strong>100</strong></span>
-                    </div>
-                    <h4 className="card-title mbr-fonts-style display-5"><strong>Shops</strong></h4>
-                    <p className="mbr-text card-text mbr-fonts-style display-7">We are affiliated with more than 100 shops who will always give you the best ingredient deals</p>
-                </div>
-            </Col>
-    
-        </Row>
+            </Row>
 
-    </Container>
+        </Container>
+    </div>
 
 
     

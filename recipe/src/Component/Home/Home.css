@@ -17,6 +17,11 @@
     padding: 30px;
 
 }
+.title_data{
+    color:#47B5ED;
+    font-weight:bolder;
+    font-size:55px;
+}
 .features-row
 {
     text-align: center;
