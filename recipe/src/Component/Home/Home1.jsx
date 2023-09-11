@@ -4,8 +4,16 @@ import HomeCarausel from '../HomeCarousel/HomeCarausel';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Home.css'
+import { useState } from 'react';
+import { AuthContext } from '../Helpers/AuthContext';
 
 const Home1 = () => {
+
+  const [authState, setAuthState] = useState({
+    user_name: "",
+    logged: false,
+  });
+
     const recipes = [
         {
           title: "Spaghetti Carbonara",

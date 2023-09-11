@@ -18,7 +18,8 @@ import SearchByDescription from './Component/SearchByDescription/SearchByDescrip
 import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
 import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
 import SignUp from './Component/SignUp/SignUp.jsx';
-
+import SignIn from './Component/SignIn/SignIn.jsx';
+import Profile from './Component/Profile/profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         element : <Recipe></Recipe>,
         loader : recipeLoader,
       },
+      {
+        path : "/profile",
+        element : <Profile></Profile>,
+      },
 
       {
         path : "/recips/:id/steps",
@@ -55,6 +60,10 @@ const router = createBrowserRouter([
       {
         path : "/signup",
         element : <SignUp/>,
+      },
+      {
+        path : "/signin",
+        element : <SignIn/>,
       },
 
     ],
