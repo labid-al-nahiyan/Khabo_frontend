@@ -40,11 +40,12 @@ const SelectIngredients = ({setIngredients}) => {
 
     const removeItem = (index)=>{
         setInputCount(inputCount-1);
+        console.log(inputCount)
+        const newInputvalue = inputValues;
+        newInputvalue.splice(index, 1);
         if(inputCount==0){
             setSelectedItem([]);
         }
-        const newInputvalue = inputValues;
-        newInputvalue.splice(index, 1);
         setInputValues(newInputvalue);
     }
     const handleSubmit = ()=>{
@@ -77,14 +78,16 @@ const SelectIngredients = ({setIngredients}) => {
 
             })
         }     
-        <div className='ingredientList'>
-            <ul className='ingredient_list'>
-                {   
-                    selectedItem.map((item, index) => {
-                        return <li className='ingredient' key={index}  onClick={() => handleItemClick(item)}>{item}</li>
-                    })
-                }  
-            </ul>
+        <div className='ingredient_List'>
+            <div className='ingredient_list'>
+                <ul >
+                    {   
+                        selectedItem.map((item, index) => {
+                            return <li className='ingredient' key={index}  onClick={() => handleItemClick(item)}>{item}</li>
+                        })
+                    }  
+                </ul>
+            </div>
             <button className='ingredientAddBtn' onClick={handleAddInput}><AddSharpIcon></AddSharpIcon></button>
            
             {(inputCount>=1)?<button className='submit_ingredients' onClick={handleSubmit}>Search</button>:""}

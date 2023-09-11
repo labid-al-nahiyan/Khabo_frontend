@@ -1,0 +1,24 @@
+.recipe-feedback-container
+{
+    text-align: start;
+    padding: 20px;
+}
+.post-feedback
+{
+    width: 95%;
+    margin: 15px;
+}
+.post-feedback textarea
+{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+.post-feedback-btn{
+    margin: 10px;
+    text-align: end;
+}
+.post-feedback-btn button
+{
+    padding: 5px 20px 4px 20px;
+}

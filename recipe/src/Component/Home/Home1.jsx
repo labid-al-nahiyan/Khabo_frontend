@@ -1,8 +1,9 @@
 import ScrollCarousel from 'scroll-carousel-react';
 import RecipeCart from '../RecipeCart/RecipeCart';
 import HomeCarausel from '../HomeCarousel/HomeCarausel';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Grid } from '@mui/material';
+import './Home.css'
 
 const Home1 = () => {
     const recipes = [
@@ -153,14 +154,9 @@ const Home1 = () => {
     return (
 
       <div >
-
-
-
-
         <HomeCarausel></HomeCarausel>
-   
+      <div className='feature-show-container'>
         <Container >
-            
             <Row>
                 <Col >
                     <h3 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
@@ -169,34 +165,34 @@ const Home1 = () => {
                     
                 </Col>
             </Row>
-            <Row>
-                <Col xs={12} md={6} lg={3}>
+            <Row className='features-row'>
+                <Col xs={12} md={6} lg={3} className='single-feature'>
                     <div className="card-wrapper">
                         <div className="card-box align-center">
-                            <div className="iconfont-wrapper">
-                                <span className="mbr-iconfont mobi-mbri-search mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            <div style={{marginBottom:'15px'}}>
+                                <SearchOutlinedIcon style={{fontSize:'60px'}}></SearchOutlinedIcon>
                             </div>
                             <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Description</strong></h5>
                             <p className="card-text mbr-fonts-style display-7">Can't remember the exact name of a recipe or don't know a recipe of an amazing food you have eaten in restaurant? No worry, just describe it.</p>
                         </div>
                     </div>
                 </Col>
-                <Col  xs={12} md={6} lg={3}>
+                <Col  xs={12} md={6} lg={3} className='single-feature'>
                     <div className="card-wrapper">
                         <div className="card-box align-center">
-                            <div className="iconfont-wrapper">
-                                <span className="mbr-iconfont mobi-mbri-apple mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            <div style={{marginBottom:'15px'}}>
+                                <span className="mbr-iconfont mobi-mbri-apple mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)',fontSize:'60px'  }}></span>
                             </div>
                             <h5 className="card-title mbr-fonts-style display-7"><strong>Find Recipe With Ingredients</strong></h5>
                             <p className="card-text mbr-fonts-style display-7">Have some leftover random ingredients in your pantry, You want the test of some ingredients in your food but don't know the recipe?</p>
                         </div>
                     </div>
                 </Col>
-                <Col  xs={12} md={6} lg={3}>
+                <Col  xs={12} md={6} lg={3} className='single-feature'>
                     <div className="card-wrapper">
                         <div className="card-box align-center">
-                            <div className="iconfont-wrapper">
-                                <span className="mbr-iconfont mobi-mbri-edit-2 mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)' }}></span>
+                            <div style={{marginBottom:'15px'}}>
+                                <span className="mbr-iconfont mobi-mbri-edit-2 mobi-mbri" style={{ color: 'rgb(53, 53, 53)', fill: 'rgb(53, 53, 53)',fontSize:'60px' }}></span>
                             </div>
                             <h5 className="card-title mbr-fonts-style display-7"><strong>Add Your Own Recipe</strong></h5>
                             <p className="card-text mbr-fonts-style display-7">An awesome recipe you want to share with our amazing community? Don't wait further, start writing.&nbsp;</p>
@@ -206,16 +202,15 @@ const Home1 = () => {
                 
             </Row>
         </Container>
+      </div>
 
-    
-    <div className="position-relative">
+    <div>
         <div className="mbr-section-head">
-            <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Popular Recipes</strong></h4>
-            
+            <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Popular Recipes</strong>
+            </h4>  
         </div>
         <div>
         <>
-      <h1>This is my component page</h1>
 
       <ScrollCarousel
         autoplay

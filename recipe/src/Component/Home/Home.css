@@ -4,6 +4,25 @@
     min-height: 100vh; /* Make the wrapper at least the height of the viewport */
 
 }
+.feature-show-container
+{
+    background-color: #9FDBF8;
+    padding: 30px;
+}
+.single-feature
+{
+    background-color: #9FDBF8;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 30px;
+
+}
+.features-row
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 #root {
     /* max-width: 1280px;  */
     width: 100%;
