@@ -1,0 +1,12 @@
+.signup-container
+{
+    text-align: start;
+    padding: 30px;
+    align-items: ;
+}
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
