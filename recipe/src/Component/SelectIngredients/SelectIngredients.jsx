@@ -4,8 +4,7 @@ import AddSharpIcon from '@mui/icons-material/AddSharp';
 import './SelectIngredients.css'
 import { checkPropTypes } from 'prop-types';
 
-const SelectIngredients = ({setIngredients}) => {
-    const ingredients = ['Egg', 'Rice', 'Beef', 'Chicken', 'Fish']
+const SelectIngredients = ({setIngredients,ingredients}) => {
 
     const [inputCount, setInputCount] = useState(0) // Initial input field count
     const [selectedItem, setSelectedItem] = useState([])
@@ -13,6 +12,7 @@ const SelectIngredients = ({setIngredients}) => {
     const [inputFieldIdx, setInputFieldIdx] = useState(0)
 
     const handleAddInput = () => {
+        console.log(ingredients)
         setInputCount(inputCount + 1);
         setInputValues([...inputValues,''])
         console.log(inputValues.length)
@@ -34,7 +34,7 @@ const SelectIngredients = ({setIngredients}) => {
 
     const filteredOptions = (match)=>{
         setSelectedItem(ingredients);
-        const newSelected = selectedItem.filter(ingredient => ingredient.toLowerCase().includes(match.toLowerCase()));
+        const newSelected = selectedItem.filter(ingredient => ingredient.name.toLowerCase().includes(match.toLowerCase()));
         (match=="")?setSelectedItem(ingredients):setSelectedItem(newSelected);
     }
 
@@ -55,11 +55,7 @@ const SelectIngredients = ({setIngredients}) => {
 
     return (
         <div className='ingredientListContainer'>
-            <div style={{textAlign:'start',paddingLeft:'100px'}}>
-
-                <h3 style={{}}>Add the ingredients for which you want your recipe based on</h3>
-
-            </div>
+            
         { 
         inputValues.map((value, index) => {         
             return  <div key={index} className="added_ingredient_name"> 
@@ -83,7 +79,7 @@ const SelectIngredients = ({setIngredients}) => {
                 <ul >
                     {   
                         selectedItem.map((item, index) => {
-                            return <li className='ingredient' key={index}  onClick={() => handleItemClick(item)}>{item}</li>
+                            return <li className='ingredient' key={index}  onClick={() => handleItemClick(item.name)}>{item.name}</li>
                         })
                     }  
                 </ul>
@@ -99,7 +95,8 @@ const SelectIngredients = ({setIngredients}) => {
     );
 };
 SelectIngredients.propTypes = {
-    setIngredients: checkPropTypes.function
+    setIngredients: checkPropTypes.function,
+    ingredients : checkPropTypes.array
 }
 
 export default SelectIngredients;

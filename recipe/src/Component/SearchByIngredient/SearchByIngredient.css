@@ -3,4 +3,39 @@
     display: grid;
     grid-template-columns: 50% 50%;
 
+    background-image: url("https://img.freepik.com/free-photo/top-view-egg-toasts-with-tomatoes-seasonings-white-background-photo-morning-breakfast-lunch-salad-color-food_140725-159325.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=ais");
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; 
+    
+    
+}
+.searchByIngredient-right
+{
+    /* background-color: rgba(255, 255, 255,.7); */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+.searchByIngredient-left
+{
+    /* background-color: rgba(255, 255, 255,.7); */
+
+}
+.slide-in {
+    
+    /* background-color: rgba(255, 255, 255, 0.7); */
+
+    color: #242323;
+    text-align: center;
+    position: relative;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); /* Slide in from the right */
+    }
+    to {
+        transform: translateX(0); /* Slide to the original position */
+    }
 }

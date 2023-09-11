@@ -17,9 +17,14 @@ import SearchByDescription from './Component/SearchByDescription/SearchByDescrip
 
 import RecipeSteps from './Component/RecipeSteps/RecipeSteps.jsx';
 import { recipeStepsLoader } from './Component/RecipeSteps/RecipeSteps.jsx';
+import { ingredientsLoader } from './Component/SearchByIngredient/SearchByIngredient.jsx';
 import SignUp from './Component/SignUp/SignUp.jsx';
+
 import SignIn from './Component/SignIn/SignIn.jsx';
 import Profile from './Component/Profile/profile.jsx';
+
+import { populerRecipeLoader } from './Component/Home/Home1.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -28,11 +33,13 @@ const router = createBrowserRouter([
     children:[
       {
         path : "/",
-        element : <Home1/>
+        element : <Home1/>,
+        loader : populerRecipeLoader,
       },
       {
         path : "/search/byIngredients",
-        element : <SearchByIngredient/>
+        element : <SearchByIngredient/>,
+        loader : ingredientsLoader,
       },
       {
         path : "/search/byDescription",

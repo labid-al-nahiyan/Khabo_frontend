@@ -1,13 +1,12 @@
 .home_container
 {
     width: 100%;
-    min-height: 100vh; /* Make the wrapper at least the height of the viewport */
-
+    min-height: 100vh; 
 }
 .feature-show-container
 {
     background-color: #9FDBF8;
-    padding: 30px;
+    padding: 10px;
 }
 .single-feature
 {
@@ -16,6 +15,11 @@
     border-radius: 5px;
     padding: 30px;
 
+}
+.title_data{
+    color:#47B5ED;
+    font-weight:bolder;
+    font-size:55px;
 }
 .features-row
 {
@@ -29,4 +33,12 @@
     margin: 0 ;
     text-align: center;
 }
-  
+.home_scroll
+{
+    margin-top: 30px;
+}
+.home_scroll_header h1
+{
+    font-weight:bolder;
+    font-size:50px;
+}

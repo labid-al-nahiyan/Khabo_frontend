@@ -1,0 +1,44 @@
+.carouselcustomItem
+{
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq843i2nuaWDPsnZ5ok9AHgvLWHcvh2v7drw&usqp=CAU');
+    background-size: cover; /* Optional: Adjust the image size */
+   /* background-repeat: no-repeat;  */
+    display: flex;
+}
+.carouselcustomItem-1
+{
+    background-image: url('https://img.freepik.com/free-photo/toast-with-avocado-plate_1220-7374.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=sph');
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; 
+}
+.carouselcustomItem-2
+{
+    background-image: url('https://img.freepik.com/free-photo/various-rice-scattered-from-bottles_23-2148180891.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=sph');
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; 
+}
+.carouselcustomItem-3
+{
+    background-image: url('https://img.freepik.com/free-photo/top-view-food-ingredients_23-2148834755.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=ais');
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; 
+}
+.caroselcustomItem-right
+{
+    width: 50%;
+    background-color: rgba(255, 255, 255,.6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.caroselcustomItem-left
+{
+    display: flex;
+    justify-content: center;
+}
+.caroselcustomItem-left img
+{
+    height: 100%;
+}

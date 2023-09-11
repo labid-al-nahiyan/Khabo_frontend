@@ -6,7 +6,7 @@ import UserFeedback from "../UserFeedback/UserFeedback";
 export const recipeLoader = async ({ params }) => {
     const res = await fetch(`https://khabo.pythonanywhere.com/recipes/${params.id}`);
     const resJson = await res.json();
-  
+    console.log(resJson)
     return resJson;
   };
 
@@ -31,7 +31,19 @@ const Recipe = () => {
                 <div className="recipe-details-body">
                     <div className="recipe-details-description">
                         <p>{recipe.description}</p>
+                        <h5>Ingredients needed : </h5>
+                        <div className="recipe-ingredients">
+                            
+                            <ul>
+                                {
+                                    recipe.ingredients.map((ingredient,index)=>{
+                                        return <li key={index}>{ingredient.quantity}</li>
+                                    })
+                                }
+                            </ul>
+                        </div>
                     </div>
+                    
                     <div className="recipe-extra-info">
                         <div>
                             <div className="recipe-details-makingtime">

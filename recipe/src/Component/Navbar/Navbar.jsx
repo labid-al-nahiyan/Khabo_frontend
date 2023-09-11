@@ -17,24 +17,25 @@ const Navbar = () => {
     const [authState,setAuthState] = useContext(AuthContext);
     return (
         <nav className="navbar-container">
-            <div className="navbar_container">
+            <div className="navbar_container_menu">
                 <div className='logo-container'>
                     <h1 className="logo">Khabo</h1>
                 </div>
                 <div className='menu'>
                     <ul className="menu">
                         <li className="nav-item">
-                            <Link to="/">Home</Link>
+                            <Link to="/" className="nav-item">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/search/byDescription">Recipe</Link>
+                            <Link to="/search/byDescription" className="nav-item">Recipe</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/search/byIngredients">Ingredients</Link>
+                            <Link to="/search/byIngredients" className="nav-item">Ingredients</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/create">Create</Link>
+                            <Link to="/create" className="nav-item">Create</Link>
                         </li>
+
                         {(authState.logged==false) 
                       && <li className='nav-item'>
                       <Link to='/signup'><button>Sign Up</button></Link>
@@ -51,6 +52,11 @@ const Navbar = () => {
                       && <li className='nav-item'>
                       <button onClick={logOut}>Logout</button>
                         </li>}
+
+                        <li className='nav-item'>
+                            <Link to='/signup' className="nav-item"><button>Sign Up</button></Link>
+                        </li>
+
                     </ul>
                 </div>
             </div>
