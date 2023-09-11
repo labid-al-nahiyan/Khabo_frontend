@@ -11,7 +11,7 @@ const HomeCarausel = () => {
       <Carousel>
       <Carousel.Item>
         {/* <ExampleCarouselImage text="First slide" /> */}
-        <div style={{ height: "575px"}} className='carouselcustomItem'   >
+        <div style={{ height: "575px"}} className='carouselcustomItem carouselcustomItem-1'   >
           <div style={{width:'50%'}} className='caroselcustomItem-left'>
               <img src="https://img.freepik.com/free-photo/toast-with-avocado-plate_1220-7374.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=sph" alt="" />
           </div>
@@ -31,7 +31,7 @@ const HomeCarausel = () => {
       </Carousel.Item>
       
       <Carousel.Item>
-        <div style={{ height: "575px" }} className='carouselcustomItem' >
+        <div style={{ height: "575px" }} className='carouselcustomItem carouselcustomItem-2' >
           <div style={{width:'50%'}} className='caroselcustomItem-left'>
               <img src="https://img.freepik.com/free-photo/various-rice-scattered-from-bottles_23-2148180891.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=sph" alt="" />
           </div>
@@ -48,7 +48,7 @@ const HomeCarausel = () => {
       </Carousel.Item>
       <Carousel.Item>
         {/* <ExampleCarouselImage text="Third slide" /> */}
-        <div style={{ height: "575px" }} className='carouselcustomItem' >
+        <div style={{ height: "575px" }} className='carouselcustomItem carouselcustomItem-3' >
             <div style={{width:'50%'}} className='caroselcustomItem-left'>
                 <img src="https://img.freepik.com/free-photo/top-view-food-ingredients_23-2148834755.jpg?size=626&ext=jpg&ga=GA1.2.544568252.1694433592&semt=ais" alt="" />
             </div>

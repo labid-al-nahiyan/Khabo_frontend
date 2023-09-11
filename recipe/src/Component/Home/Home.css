@@ -1,8 +1,7 @@
 .home_container
 {
     width: 100%;
-    min-height: 100vh; /* Make the wrapper at least the height of the viewport */
-
+    min-height: 100vh; 
 }
 .feature-show-container
 {
