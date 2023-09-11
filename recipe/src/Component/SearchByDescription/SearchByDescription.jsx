@@ -67,7 +67,7 @@ const SearchByDescription = () => {
             </div>
             <div className="col-lg-7 offset-lg-1 col-12">
                 <div className="image-wrapper">
-                    <img className="w-100" src="assets/images/mbr-3.jpg" alt="Mobirise Website Builder" />
+                    <img className="w-100" src="../../assets/images/mbr-3.jpg" alt="Mobirise Website Builder" />
                 </div>
             </div>
         </div>
