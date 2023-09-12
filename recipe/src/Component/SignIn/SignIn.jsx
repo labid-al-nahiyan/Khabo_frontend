@@ -5,6 +5,7 @@ import axios from 'axios';
 import { AuthContext } from '../Helpers/AuthContext';
 import { useContext } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
     const [authState,setAuthState]= useContext(AuthContext);
@@ -64,10 +65,13 @@ function SignIn() {
      // navigate("/")
   };
 
+  const navToSignUp = () => {
+    navigate("/signup");
+  };
 
   return (
     <div className="signup-container">
-      <h2>Sign In</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">Username:</label>
@@ -91,7 +95,8 @@ function SignIn() {
             required
           />
         </div>
-        <button type="submit">Sign In</button>
+        <button type="submit" class="buttonL" title="Sign in to an existing account">Sign In</button>
+       <button onClick={navToSignUp} title="Create a new account">Sign Up</button>
       </form>
     </div>
   );

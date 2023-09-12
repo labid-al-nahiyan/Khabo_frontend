@@ -75,7 +75,7 @@ const Recipe = () => {
                 {clicked&&<RecipeSteps id={recipe.id} steps={recipe.steps}></RecipeSteps>}
             </div>
             <div className="recipe-feedback">
-                <UserFeedback feedbacks = {recipe.feedback}></UserFeedback>
+                <UserFeedback recipe = {recipe}></UserFeedback>
             </div>
         </div>
     );
